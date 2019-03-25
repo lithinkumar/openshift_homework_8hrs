@@ -67,9 +67,9 @@ openshift_master_api_port=443
 openshift_master_console_port=443
 
 #Default:  openshift_master_cluster_method=native
-openshift_master_cluster_hostname=loadbalancer.14d2.internal
-openshift_master_cluster_public_hostname=loadbalancer.14d2.example.opentlc.com
-openshift_master_default_subdomain=apps.14d2.example.opentlc.com
+openshift_master_cluster_hostname=loadbalancer.a56e.internal
+openshift_master_cluster_public_hostname=loadbalancer.a56e.example.opentlc.com
+openshift_master_default_subdomain=apps.a56e.example.opentlc.com
 openshift_master_overwrite_named_certificates=True
 
 
@@ -224,33 +224,33 @@ nodes
 nfs
 
 [lb]
-loadbalancer.14d2.internal
+loadbalancer.a56e.internal
 
 [masters]
-master1.14d2.internal
-master2.14d2.internal
-master3.14d2.internal
+master1.a56e.internal
+master2.a56e.internal
+master3.a56e.internal
 
 [etcd]
-master1.14d2.internal
-master2.14d2.internal
-master3.14d2.internal
+master1.a56e.internal
+master2.a56e.internal
+master3.a56e.internal
 
 [nodes]
 ## These are the masters
-master1.14d2.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
-master2.14d2.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
-master3.14d2.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
+master1.a56e.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
+master2.a56e.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
+master3.a56e.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
 
 ## These are infranodes
-infranode1.14d2.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
-infranode2.14d2.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
+infranode1.a56e.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
+infranode2.a56e.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
 
 ## These are regular nodes
-node1.14d2.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-node2.14d2.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-node3.14d2.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node1.a56e.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node2.a56e.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node3.a56e.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
 
 
 [nfs]
-support1.14d2.internal
+support1.a56e.internal
