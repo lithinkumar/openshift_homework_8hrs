@@ -31,7 +31,7 @@ openshift_release=3.11.51
 
 
 # Node Groups
-openshift_node_groups=[{'name': 'node-config-master', 'labels': ['node-role.kubernetes.io/master=true','runtime=docker']}, {'name': 'node-config-infra', 'labels': ['node-role.kubernetes.io/infra=true','runtime=docker']}, {'name': 'node-config-compute', 'labels': ['node-role.kubernetes.io/compute=true','runtime=docker'], 'edits': [{ 'key': 'kubeletArguments.pods-per-core','value': ['20']}]}]
+openshift_node_groups=[{'name': 'node-config-master', 'labels': ['node-role.kubernetes.io/master=true','runtime=cri-o']}, {'name': 'node-config-infra', 'labels': ['node-role.kubernetes.io/infra=true','runtime=cri-o']}, {'name': 'node-config-compute', 'labels': ['node-role.kubernetes.io/compute=true','runtime=cri-o'], 'edits': [{ 'key': 'kubeletArguments.pods-per-core','value': ['20']}]}]
 # Configure node kubelet arguments. pods-per-core is valid in OpenShift Origin 1.3 or OpenShift Container Platform 3.3 and later. -> These  need to go into the above
 # openshift_node_kubelet_args={'pods-per-core': ['10'], 'max-pods': ['250'], 'image-gc-high-threshold': ['85'], 'image-gc-low-threshold': ['75']}
 
@@ -67,9 +67,9 @@ openshift_master_api_port=443
 openshift_master_console_port=443
 
 #Default:  openshift_master_cluster_method=native
-openshift_master_cluster_hostname=loadbalancer.a56e.internal
-openshift_master_cluster_public_hostname=loadbalancer.a56e.example.opentlc.com
-openshift_master_default_subdomain=apps.a56e.example.opentlc.com
+openshift_master_cluster_hostname=loadbalancer.1cb9.internal
+openshift_master_cluster_public_hostname=loadbalancer.1cb9.example.opentlc.com
+openshift_master_default_subdomain=apps.1cb9.example.opentlc.com
 openshift_master_overwrite_named_certificates=True
 
 
@@ -224,33 +224,33 @@ nodes
 nfs
 
 [lb]
-loadbalancer.a56e.internal
+loadbalancer.1cb9.internal
 
 [masters]
-master1.a56e.internal
-master2.a56e.internal
-master3.a56e.internal
+master1.1cb9.internal
+master2.1cb9.internal
+master3.1cb9.internal
 
 [etcd]
-master1.a56e.internal
-master2.a56e.internal
-master3.a56e.internal
+master1.1cb9.internal
+master2.1cb9.internal
+master3.1cb9.internal
 
 [nodes]
 ## These are the masters
-master1.a56e.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
-master2.a56e.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
-master3.a56e.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
+master1.1cb9.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
+master2.1cb9.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
+master3.1cb9.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
 
 ## These are infranodes
-infranode1.a56e.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
-infranode2.a56e.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
+infranode1.1cb9.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
+infranode2.1cb9.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
 
 ## These are regular nodes
-node1.a56e.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-node2.a56e.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-node3.a56e.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node1.1cb9.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node2.1cb9.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node3.1cb9.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
 
 
 [nfs]
-support1.a56e.internal
+support1.1cb9.internal
