@@ -67,9 +67,9 @@ openshift_master_api_port=443
 openshift_master_console_port=443
 
 #Default:  openshift_master_cluster_method=native
-openshift_master_cluster_hostname=loadbalancer.1cb9.internal
-openshift_master_cluster_public_hostname=loadbalancer.1cb9.example.opentlc.com
-openshift_master_default_subdomain=apps.1cb9.example.opentlc.com
+openshift_master_cluster_hostname=loadbalancer.48c7.internal
+openshift_master_cluster_public_hostname=loadbalancer.48c7.example.opentlc.com
+openshift_master_default_subdomain=apps.48c7.example.opentlc.com
 openshift_master_overwrite_named_certificates=True
 
 
@@ -224,33 +224,33 @@ nodes
 nfs
 
 [lb]
-loadbalancer.1cb9.internal
+loadbalancer.48c7.internal
 
 [masters]
-master1.1cb9.internal
-master2.1cb9.internal
-master3.1cb9.internal
+master1.48c7.internal
+master2.48c7.internal
+master3.48c7.internal
 
 [etcd]
-master1.1cb9.internal
-master2.1cb9.internal
-master3.1cb9.internal
+master1.48c7.internal
+master2.48c7.internal
+master3.48c7.internal
 
 [nodes]
 ## These are the masters
-master1.1cb9.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
-master2.1cb9.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
-master3.1cb9.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
+master1.48c7.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
+master2.48c7.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
+master3.48c7.internal openshift_node_group_name='node-config-master' openshift_node_problem_detector_install=true
 
 ## These are infranodes
-infranode1.1cb9.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
-infranode2.1cb9.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
+infranode1.48c7.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
+infranode2.48c7.internal openshift_node_group_name='node-config-infra' openshift_node_problem_detector_install=true
 
 ## These are regular nodes
-node1.1cb9.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-node2.1cb9.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
-node3.1cb9.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node1.48c7.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node2.48c7.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
+node3.48c7.internal openshift_node_group_name='node-config-compute' openshift_node_problem_detector_install=true
 
 
 [nfs]
-support1.1cb9.internal
+support1.48c7.internal
